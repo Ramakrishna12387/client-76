@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TN76 MOTO POINT | Premium Helmets, Riding Gear & Bike Accessories | Surandai</title>
+  <meta name="description" content="TN76 Moto Point in Surandai, Tenkasi District. Premium helmets, riding gear, and bike accessories. Genuine quality, honest counter pricing and instant WhatsApp ordering.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
+
+  <!-- Google Fonts: Cinzel & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#070707',
+              900: '#0c0b09',
+              850: '#11100d',
+              800: '#181612',
+              700: '#24211b'
+            },
+            gold: {
+              100: '#fbf7e8',
+              200: '#f5ecc5',
+              300: '#ebd994',
+              400: '#dfc261',
+              500: '#d4af37', // Base metallic gold
+              600: '#b89228',
+              700: '#916e1c',
+              800: '#6d5116'
+            },
+            amber: {
+              accent: '#f59e0b'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            outfit: ['Outfit', 'sans-serif']
+          },
+          boxShadow: {
+            'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.25)',
+            'gold-glow-lg': '0 0 60px -10px rgba(212, 175, 55, 0.35)',
+            'card-tilt': '0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.1)'
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 5s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+            'spin-slow': 'spin 18s linear infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Luxury Styling */
+    ::selection {
+      background: #d4af37;
+      color: #0c0b09;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c0b09;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2b271f;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+
+    /* Metallic Gold Text Shimmer */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fff3c4 0%, #d4af37 50%, #997316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #f5ecc5 0%, #d4af37 60%, #a88220 100%);
+    }
+
+    /* Radial Spotlight Background for Cards */
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: var(--mouse-y, -1000px);
+      left: var(--mouse-x, -1000px);
+      width: 380px;
+      height: 380px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0) 70%);
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      opacity: 0;
+      z-index: 1;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Glassmorphism Classes */
+    .glass-nav {
+      background: rgba(12, 11, 9, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    .glass-card {
+      background: rgba(18, 17, 14, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(212, 175, 55, 0.5);
+      transform: translateY(-4px);
+    }
+
+    /* Particle Canvas overlay */
+    #ambient-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-obsidian-950 text-neutral-200 font-outfit antialiased selection:bg-gold-500 selection:text-black min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Golden Particle Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Sound Toggle Indicator (Floating Web Audio Feedback) -->
+  <div class="fixed top-20 right-4 z-50 flex items-center">
+    <button id="soundToggleBtn" onclick="toggleSound()" class="flex items-center gap-2 bg-obsidian-900/80 hover:bg-obsidian-800 text-xs text-neutral-300 hover:text-gold-400 px-3 py-1.5 rounded-full border border-gold-500/20 backdrop-blur-md transition-all shadow-lg group" title="Toggle tactile sound effects">
+      <i id="soundIcon" data-lucide="volume-2" class="w-3.5 h-3.5 text-gold-400 group-hover:scale-110 transition-transform"></i>
+      <span id="soundLabel" class="hidden sm:inline font-mono tracking-wider">SOUND ON</span>
+    </button>
+  </div>
+
+  <!-- STICKY LUXURY HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Brand -->
+      <a href="#hero" class="flex items-center gap-3 group" onclick="playHaptic('nav')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400/20 to-gold-700/10 border border-gold-500/40 flex items-center justify-center group-hover:border-gold-400 transition-all duration-300 shadow-gold-glow">
+          <i data-lucide="shield" class="w-5 h-5 text-gold-400 group-hover:rotate-12 transition-transform"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-cinzel text-xl font-bold tracking-wider text-neutral-100 group-hover:text-gold-300 transition-colors">TN76</span>
+            <span class="font-cinzel text-xl font-extralight tracking-widest text-gold-400">MOTO POINT</span>
+          </div>
+          <span class="text-[10px] tracking-widest text-neutral-400 uppercase font-mono block -mt-1">Surandai · Tenkasi District</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#shop" class="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold-400 font-medium transition-colors hover:translate-y-[-1px] inline-flex items-center gap-1.5" onclick="playHaptic('click')">
+          <span>Collection</span>
+        </a>
+        <a href="#why" class="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold-400 font-medium transition-colors hover:translate-y-[-1px]" onclick="playHaptic('click')">
+          <span>Why Us</span>
+        </a>
+        <a href="#fitment" class="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold-400 font-medium transition-colors hover:translate-y-[-1px]" onclick="playHaptic('click')">
+          <span>Fitment Guide</span>
+        </a>
+        <a href="#reviews" class="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold-400 font-medium transition-colors hover:translate-y-[-1px]" onclick="playHaptic('click')">
+          <span>Reviews</span>
+        </a>
+        <a href="#visit" class="text-sm uppercase tracking-widest text-neutral-300 hover:text-gold-400 font-medium transition-colors hover:translate-y-[-1px]" onclick="playHaptic('click')">
+          <span>Location</span>
+        </a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Direct WhatsApp Call Out -->
+        <a href="https://wa.me/919585023258?text=Hello%20TN76%20Moto%20Point%2C%20I%20am%20interested%20in%20your%20products." target="_blank" class="hidden lg:flex items-center gap-2 px-3.5 py-2 rounded-full border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-900/40 text-emerald-400 text-xs font-medium tracking-wide transition-all duration-300 hover:border-emerald-400" onclick="playHaptic('cta')">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>+91 95850 23258</span>
+        </a>
+
+        <!-- Interactive Cart Trigger Button -->
+        <button id="cartDrawerTrigger" onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-gold-glow hover:shadow-gold-glow-lg active:scale-95">
+          <i data-lucide="shopping-bag" class="w-4 h-4 text-obsidian-950"></i>
+          <span class="font-bold">BAG</span>
+          <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-obsidian-950 text-gold-400 text-[11px] font-mono flex items-center justify-center font-bold">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg bg-obsidian-850 border border-gold-500/20 text-neutral-300 hover:text-gold-400">
+          <i id="mobileMenuIcon" data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-obsidian-900/95 border-b border-gold-500/20 backdrop-blur-2xl px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4">
+        <a href="#shop" onclick="toggleMobileMenu()" class="text-sm uppercase tracking-widest text-neutral-200 hover:text-gold-400 py-2 border-b border-neutral-800">Shop Collection</a>
+        <a href="#why" onclick="toggleMobileMenu()" class="text-sm uppercase tracking-widest text-neutral-200 hover:text-gold-400 py-2 border-b border-neutral-800">Why TN76</a>
+        <a href="#fitment" onclick="toggleMobileMenu()" class="text-sm uppercase tracking-widest text-neutral-200 hover:text-gold-400 py-2 border-b border-neutral-800">Size & Fitment Guide</a>
+        <a href="#reviews" onclick="toggleMobileMenu()" class="text-sm uppercase tracking-widest text-neutral-200 hover:text-gold-400 py-2 border-b border-neutral-800">Rider Reviews</a>
+        <a href="#visit" onclick="toggleMobileMenu()" class="text-sm uppercase tracking-widest text-neutral-200 hover:text-gold-400 py-2">Visit Counter</a>
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="tel:+919585023258" class="flex items-center justify-center gap-2 py-2.5 rounded-lg border border-gold-500/40 text-gold-400 text-xs font-semibold">
+            <i data-lucide="phone-call" class="w-4 h-4"></i> Call 095850 23258
+          </a>
+          <a href="https://wa.me/919585023258" target="_blank" class="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-emerald-600 text-white text-xs font-semibold">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Shop
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="relative z-10 pt-28">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 overflow-hidden">
+      
+      <!-- Ambient Lighting Blobs -->
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-gold-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-10 right-0 w-[30rem] h-[30rem] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content Column -->
+        <div class="lg:col-span-7 space-y-7 text-left">
+          
+          <!-- Rating & Social Proof Pill -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-900/90 border border-gold-500/30 text-xs font-medium text-neutral-200 shadow-gold-glow animate-pulse-slow">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="font-mono text-gold-400 font-bold tracking-wider">TN76</span>
+            <span class="text-neutral-500">·</span>
+            <span class="text-amber-400 tracking-wider">★★★★★ 5.0</span>
+            <span class="text-neutral-500">·</span>
+            <span class="text-neutral-300">Loved by Surandai Riders</span>
+          </div>
+
+          <!-- Hero Main Editorial Title -->
+          <h1 class="font-cinzel text-4xl sm:text-6xl xl:text-7xl font-bold tracking-tight text-neutral-100 leading-[1.1]">
+            Ride. <br>
+            <span class="gold-gradient-text italic font-serif">Protect.</span> <br>
+            Style.
+          </h1>
+
+          <!-- Value Proposition Description -->
+          <p class="text-base sm:text-lg text-neutral-400 max-w-xl font-light leading-relaxed">
+            Premium helmets, riding gear and bike accessories — genuine certified quality and honest service at Surandai’s favourite moto counter.
+          </p>
+
+          <!-- Dual Call to Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#shop" class="px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 hover:from-gold-400 hover:to-gold-300 text-obsidian-950 font-bold text-sm uppercase tracking-widest shadow-gold-glow-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center gap-2 group" onclick="playHaptic('cta')">
+              <span>Shop The Collection</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+
+            <a href="https://wa.me/919585023258?text=Hi%20TN76%20Moto%20Point%2C%20I%20would%20like%20to%20order%20gear%20for%20my%20bike" target="_blank" class="px-7 py-4 rounded-full bg-obsidian-900/80 hover:bg-obsidian-800 text-neutral-200 hover:text-emerald-400 border border-neutral-700/80 hover:border-emerald-500/50 font-semibold text-sm tracking-wider transition-all duration-300 flex items-center gap-2.5 group" onclick="playHaptic('click')">
+              <i data-lucide="message-square" class="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform"></i>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Real-Time Counter Status Banner -->
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-neutral-400 border-t border-neutral-800/80">
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold-400"></i>
+              <span>Senkottai Road, Surandai 627859</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+              <span id="shopOpenStatusText">Open Today · 9:00 AM - 9:30 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+              <a href="tel:09585023258" class="hover:text-gold-400 font-mono underline decoration-gold-500/40">095850 23258</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive 3D Showcase Card -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          
+          <!-- Outer Rotating Golden Halo Ring -->
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-gold-500/20 via-transparent to-amber-500/20 blur-xl"></div>
+          
+          <!-- Featured Spotlight Showcase Card -->
+          <div class="relative w-full max-w-md rounded-2xl glass-card p-6 border border-gold-500/30 shadow-2xl overflow-hidden group">
+            
+            <!-- Top Card Header -->
+            <div class="flex items-center justify-between pb-4 border-b border-neutral-800/80">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-gold-400"></span>
+                <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold font-mono">FEATURED AT COUNTER</span>
+              </div>
+              <span class="text-xs bg-gold-500/15 border border-gold-500/40 text-gold-300 px-2.5 py-0.5 rounded-full font-mono font-medium">BESTSELLER</span>
+            </div>
+
+            <!-- Product Visual Presentation -->
+            <div class="relative my-6 py-6 flex items-center justify-center">
+              <!-- Radial Glow Center -->
+              <div class="absolute w-44 h-44 rounded-full bg-gold-500/15 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+              
+              <!-- Helmet Graphic Icon Composition -->
+              <div class="relative z-10 flex flex-col items-center animate-float">
+                <div class="w-32 h-32 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-gold-500/30 flex items-center justify-center shadow-gold-glow">
+                  <i data-lucide="hard-hat" class="w-16 h-16 text-gold-400 drop-shadow-[0_0_15px_rgba(212,175,55,0.6)]"></i>
+                </div>
+                <div class="mt-3 px-3 py-1 rounded-md bg-neutral-900/90 border border-neutral-700 text-[11px] font-mono text-neutral-300 flex items-center gap-1.5">
+                  <i data-lucide="check-circle" class="w-3 h-3 text-emerald-400"></i>
+                  <span>ISI & DOT Certified</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Showcase Specs & Instant Purchase Trigger -->
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between items-baseline">
+                  <h3 class="font-cinzel text-xl font-bold text-neutral-100">Full-Face Aerodynamic Helmet</h3>
+                  <span class="text-2xl font-bold text-gold-400 font-mono">₹1,800</span>
+                </div>
+                <p class="text-xs text-neutral-400 mt-1">High-impact ABS shell, anti-scratch visor with quick release strap.</p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-neutral-300">
+                <div class="p-2 rounded bg-obsidian-900 border border-neutral-800 flex items-center gap-1.5">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Size: Large (58-60cm)</span>
+                </div>
+                <div class="p-2 rounded bg-obsidian-900 border border-neutral-800 flex items-center gap-1.5">
+                  <i data-lucide="wind" class="w-3.5 h-3.5 text-gold-400"></i>
+                  <span>Air-vent channel</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 pt-2">
+                <button onclick="addToCart(1); playHaptic('add')" class="flex-1 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-gold-glow">
+                  <i data-lucide="plus" class="w-4 h-4"></i>
+                  <span>Add to Bag</span>
+                </button>
+                <button onclick="openProductQuickView(1)" class="p-3 rounded-xl bg-obsidian-900 hover:bg-obsidian-800 border border-gold-500/30 text-neutral-300 hover:text-gold-400 transition-colors" title="Quick Specs">
+                  <i data-lucide="eye" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LIVE STATS STRIP -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl text-center space-y-1 border border-gold-500/20">
+          <div class="font-cinzel text-3xl sm:text-4xl font-extrabold gold-gradient-text font-mono">5,000+</div>
+          <div class="text-xs uppercase tracking-widest text-neutral-400">Riders Equipped</div>
+          <div class="text-[10px] text-neutral-500">Across Tenkasi & Tirunelveli</div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center space-y-1 border border-gold-500/20">
+          <div class="font-cinzel text-3xl sm:text-4xl font-extrabold gold-gradient-text font-mono">100%</div>
+          <div class="text-xs uppercase tracking-widest text-neutral-400">Certified Genuine</div>
+          <div class="text-[10px] text-neutral-500">ISI & DOT Approved Gear</div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center space-y-1 border border-gold-500/20">
+          <div class="font-cinzel text-3xl sm:text-4xl font-extrabold gold-gradient-text font-mono">5.0 ★</div>
+          <div class="text-xs uppercase tracking-widest text-neutral-400">Customer Rating</div>
+          <div class="text-[10px] text-neutral-500">Highest rated moto shop</div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center space-y-1 border border-gold-500/20">
+          <div class="font-cinzel text-3xl sm:text-4xl font-extrabold gold-gradient-text font-mono">15 Min</div>
+          <div class="text-xs uppercase tracking-widest text-neutral-400">Instant Counter Pickup</div>
+          <div class="text-[10px] text-neutral-500">Reserve via WhatsApp</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CATALOG / SHOP COLLECTION SECTION -->
+    <section id="shop" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.25em] text-gold-400 font-semibold">THE COLLECTION</span>
+        <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-neutral-100">
+          Gear for <span class="gold-gradient-text italic font-serif">every ride</span>
+        </h2>
+        <p class="text-sm sm:text-base text-neutral-400">
+          Browse our handpicked inventory of certified helmets, riding gear, and accessories. Reserve online or order directly via WhatsApp.
+        </p>
+      </div>
+
+      <!-- Filter Controls & Search Bar -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-neutral-800">
+        
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2" id="categoryFilterContainer">
+          <button onclick="setCategoryFilter('all')" class="category-btn active px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-gold-500 text-obsidian-950 shadow-gold-glow" data-category="all">
+            All Items (<span id="count-all">10</span>)
+          </button>
+          <button onclick="setCategoryFilter('helmets')" class="category-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-obsidian-900 text-neutral-300 hover:text-gold-400 border border-neutral-800 hover:border-gold-500/40" data-category="helmets">
+            Helmets (<span id="count-helmets">3</span>)
+          </button>
+          <button onclick="setCategoryFilter('riding-gear')" class="category-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-obsidian-900 text-neutral-300 hover:text-gold-400 border border-neutral-800 hover:border-gold-500/40" data-category="riding-gear">
+            Riding Gear (<span id="count-riding-gear">3</span>)
+          </button>
+          <button onclick="setCategoryFilter('accessories')" class="category-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-obsidian-900 text-neutral-300 hover:text-gold-400 border border-neutral-800 hover:border-gold-500/40" data-category="accessories">
+            Accessories (<span id="count-accessories">4</span>)
+          </button>
+          <button onclick="setCategoryFilter('care-spares')" class="category-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-obsidian-900 text-neutral-300 hover:text-gold-400 border border-neutral-800 hover:border-gold-500/40" data-category="care-spares">
+            Care & Spares (<span id="count-care-spares">2</span>)
+          </button>
+        </div>
+
+        <!-- Search & Sort Controls -->
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <!-- Search Input -->
+          <div class="relative flex-1 md:w-60">
+            <i data-lucide="search" class="w-4 h-4 text-neutral-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input type="text" id="productSearchInput" oninput="handleSearch()" placeholder="Search gear or spares..." class="w-full bg-obsidian-900 border border-neutral-800 rounded-full pl-10 pr-4 py-2 text-xs text-neutral-200 placeholder-neutral-500 focus:outline-none focus:border-gold-500/60 transition-colors">
+          </div>
+
+          <!-- Sort Select -->
+          <select id="sortSelect" onchange="handleSort()" class="bg-obsidian-900 border border-neutral-800 rounded-full px-3.5 py-2 text-xs text-neutral-300 focus:outline-none focus:border-gold-500/60 transition-colors cursor-pointer">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name A-Z</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- Products Grid Container -->
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyCatalogState" class="hidden text-center py-20">
+        <i data-lucide="package-x" class="w-12 h-12 text-neutral-600 mx-auto mb-3"></i>
+        <h4 class="font-cinzel text-xl text-neutral-300">No matching gear found</h4>
+        <p class="text-xs text-neutral-500 mt-1">Try adjusting your search terms or category filter.</p>
+        <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-full bg-gold-500/20 text-gold-400 text-xs font-semibold hover:bg-gold-500/30 border border-gold-500/40">
+          Reset Filters
+        </button>
+      </div>
+
+    </section>
+
+    <!-- WHY CHOOSE TN76 MOTO POINT -->
+    <section id="why" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-mono uppercase tracking-[0.25em] text-gold-400 font-semibold">THE TN76 DIFFERENCE</span>
+        <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-neutral-100">
+          Built by Riders, <br>
+          <span class="gold-gradient-text italic font-serif">trusted by Surandai</span>
+        </h2>
+        <p class="text-sm text-neutral-400">
+          Why motorcycle enthusiasts across Tenkasi district make TN76 their primary gear pitstop.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Feature 1 -->
+        <div class="glass-card p-7 rounded-2xl space-y-4 border border-gold-500/20 relative group overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-obsidian-950 transition-all duration-300">
+            <i data-lucide="badge-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-neutral-100">100% Genuine Gear</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Strictly authentic, ISI & DOT safety certified products from reputable brands. Zero cheap replicas or compromised safety.
+          </p>
+          <div class="text-[10px] font-mono text-gold-400/80">Vega · Steelbird · Studds · Axor</div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-card p-7 rounded-2xl space-y-4 border border-gold-500/20 relative group overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-obsidian-950 transition-all duration-300">
+            <i data-lucide="scale" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-neutral-100">Honest Counter Pricing</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Direct transparent counter pricing without hidden distributor margins. What you see is what you pay.
+          </p>
+          <div class="text-[10px] font-mono text-gold-400/80">Fair Rates · Shopkeeper Guarantee</div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-card p-7 rounded-2xl space-y-4 border border-gold-500/20 relative group overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-obsidian-950 transition-all duration-300">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-neutral-100">Expert Fitment Advice</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Never ride with a loose helmet. Try on multiple shell sizes at our Surandai store with our custom fitment consultation.
+          </p>
+          <div class="text-[10px] font-mono text-gold-400/80">Head Size S to XXL Available</div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="glass-card p-7 rounded-2xl space-y-4 border border-gold-500/20 relative group overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-obsidian-950 transition-all duration-300">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-neutral-100">Instant WhatsApp Hold</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Message us on WhatsApp to hold your size or reserve rare accessories before riding down to the store.
+          </p>
+          <div class="text-[10px] font-mono text-gold-400/80">+91 95850 23258 · Fast Response</div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- INTERACTIVE HELMET SIZE & FITMENT CALCULATOR -->
+    <section id="fitment" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      <div class="rounded-3xl glass-card p-8 sm:p-12 border border-gold-500/30 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-gold-400 font-semibold">FITMENT CONSULTANT</span>
+            <h3 class="font-cinzel text-2xl sm:text-4xl font-bold text-neutral-100">
+              Find Your Perfect <br>
+              <span class="gold-gradient-text italic font-serif">Helmet Shell Size</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+              Measure around your head about 2.5 cm (1 inch) above your eyebrows. Enter your measurement below to see your recommended fit.
+            </p>
+            
+            <!-- Measuring Tips -->
+            <div class="p-4 rounded-xl bg-obsidian-900/90 border border-neutral-800 text-xs text-neutral-300 space-y-2">
+              <div class="flex items-center gap-2 text-gold-400 font-semibold">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                <span>Fitment Pro Tip:</span>
+              </div>
+              <p class="text-[11px] text-neutral-400">
+                A new helmet should fit snug against your cheeks without causing painful pressure points on the forehead or temples. The cheek pads break in within 15–20 hours of riding.
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Calculator Card -->
+          <div class="lg:col-span-6 bg-obsidian-900/80 p-6 rounded-2xl border border-gold-500/20 space-y-6">
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-neutral-300 mb-2">
+                Head Circumference (cm): <span id="cmValueDisplay" class="font-bold text-gold-400 text-base">58 cm</span>
+              </label>
+              <input type="range" id="sizeRangeInput" min="52" max="64" value="58" step="1" oninput="calculateHelmetSize(this.value)" class="w-full accent-gold-500 cursor-pointer h-2 bg-neutral-800 rounded-lg">
+              <div class="flex justify-between text-[10px] font-mono text-neutral-500 mt-1">
+                <span>52 cm (XS)</span>
+                <span>58 cm (M/L)</span>
+                <span>64 cm (XXL)</span>
+              </div>
+            </div>
+
+            <!-- Dynamic Result Card -->
+            <div class="p-5 rounded-xl bg-obsidian-950 border border-gold-500/40 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-mono tracking-wider text-neutral-400">Recommended Size</span>
+                <div id="sizeResultLabel" class="text-2xl font-cinzel font-bold text-gold-400">Large (L)</div>
+                <div id="sizeResultDetail" class="text-xs text-neutral-400 font-mono mt-0.5">58 - 59 cm · Standard Indian Fit</div>
+              </div>
+              <a href="#shop" onclick="setCategoryFilter('helmets')" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-colors">
+                View Helmets
+              </a>
+            </div>
+
+            <div class="text-center">
+              <a href="https://wa.me/919585023258?text=Hello%20TN76%20Moto%20Point%2C%20can%20you%20help%20me%20confirm%20my%20helmet%20size%3F" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 underline font-medium">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Need custom fitting advice? Chat with our counter rider</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS & TESTIMONIALS -->
+    <section id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-mono uppercase tracking-[0.25em] text-gold-400 font-semibold">VERIFIED FEEDBACK</span>
+        <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-neutral-100">
+          Loved by <span class="gold-gradient-text italic font-serif">Riders</span>
+        </h2>
+        <p class="text-sm text-neutral-400">
+          Genuine experiences from daily commuters, touring enthusiasts and weekend riders.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
+          <div class="flex items-center justify-between">
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+            <span class="text-[10px] font-mono text-neutral-500">2 weeks ago</span>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed italic">
+            "Bought a full-face helmet and riding gloves here before my ride to Courtallam and Manimuthar. The fitting advice was spot on and prices are noticeably better than big city showrooms."
+          </p>
+          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
+            <div>
+              <div class="font-bold text-xs text-neutral-100">Karthik R.</div>
+              <div class="text-[10px] text-gold-400 font-mono">Yamaha R15 V4 · Surandai</div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">
+              KR
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
+          <div class="flex items-center justify-between">
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+            <span class="text-[10px] font-mono text-neutral-500">1 month ago</span>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed italic">
+            "Ordered fog lights and disc lock through WhatsApp in the morning, collected it in the afternoon. Very polite behavior and they even helped me verify the wiring compatibility."
+          </p>
+          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
+            <div>
+              <div class="font-bold text-xs text-neutral-100">Muthu Kumar</div>
+              <div class="text-[10px] text-gold-400 font-mono">Royal Enfield Classic 350 · Tenkasi</div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">
+              MK
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
+          <div class="flex items-center justify-between">
+            <div class="flex text-amber-400 text-sm">★★★★★</div>
+            <span class="text-[10px] font-mono text-neutral-500">3 weeks ago</span>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed italic">
+            "Best moto shop in Surandai. Chain lube, genuine Motul engine oil, and mobile mount all under one roof. Genuine quality and friendly owner."
+          </p>
+          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
+            <div>
+              <div class="font-bold text-xs text-neutral-100">Selva Ganesh</div>
+              <div class="text-[10px] text-gold-400 font-mono">KTM Duke 250 · Senkottai</div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">
+              SG
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LOCATION & VISIT SECTION -->
+    <section id="visit" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Store Information -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-gold-400 font-semibold">VISIT OUR COUNTER</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-neutral-100">
+            Conveniently located in <span class="gold-gradient-text italic font-serif">Surandai</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+            Stop by for helmet trials, gear sizing, or pick up your reserved orders directly. Parking available right outside the counter.
+          </p>
+
+          <div class="space-y-4 text-xs">
+            <div class="p-4 rounded-xl bg-obsidian-900 border border-neutral-800 flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+              <div>
+                <div class="font-bold text-neutral-100">Address</div>
+                <div class="text-neutral-400 mt-0.5">S.V. Karai Govt Hr Sec School, Senkottai Road, Surandai 627859, Tenkasi District, Tamil Nadu</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-obsidian-900 border border-neutral-800 flex items-start gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
+              <div>
+                <div class="font-bold text-neutral-100">Business Hours</div>
+                <div class="text-neutral-400 mt-0.5">Monday - Sunday: 9:00 AM - 9:30 PM (All 7 Days)</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-obsidian-900 border border-neutral-800 flex items-start gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <div class="font-bold text-neutral-100">Contact & WhatsApp Orders</div>
+                <div class="text-neutral-400 mt-0.5">Phone: <a href="tel:+919585023258" class="text-gold-400 underline">095850 23258</a> | WhatsApp: +91 95850 23258</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://maps.google.com/?q=Surandai+Senkottai+Road+Tamil+Nadu" target="_blank" class="px-6 py-3 rounded-full bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-gold-glow transition-all">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions</span>
+            </a>
+            <a href="tel:+919585023258" class="px-6 py-3 rounded-full bg-obsidian-900 hover:bg-obsidian-800 border border-neutral-700 text-neutral-200 text-xs font-semibold flex items-center gap-2 transition-all">
+              <i data-lucide="phone-call" class="w-4 h-4 text-gold-400"></i>
+              <span>Call Counter</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Visual Map & Store Front Simulator -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl glass-card p-6 border border-gold-500/30 relative overflow-hidden space-y-4">
+            
+            <div class="h-64 sm:h-80 rounded-2xl bg-gradient-to-br from-obsidian-900 via-obsidian-850 to-obsidian-950 border border-neutral-800 relative flex items-center justify-center p-6 text-center overflow-hidden group">
+              <!-- Grid background styling -->
+              <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+              
+              <div class="relative z-10 space-y-3 max-w-sm">
+                <!-- Circular Emblem badge -->
+                <div class="w-16 h-16 rounded-full bg-gold-500/10 border-2 border-gold-400 mx-auto flex items-center justify-center text-gold-400 shadow-gold-glow animate-pulse-slow">
+                  <i data-lucide="map-pin" class="w-8 h-8"></i>
+                </div>
+                <div class="font-cinzel text-lg font-bold text-neutral-100">TN76 MOTO POINT · SURANDAI</div>
+                <p class="text-xs text-neutral-400 font-mono">Opposite S.V. Karai Govt Hr Sec School, Senkottai Main Road</p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/40 text-[11px] text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    Direct Store Pickups Ready in 15 Mins
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fast Quick Access Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-center text-xs">
+              <div class="p-3 rounded-xl bg-obsidian-900 border border-neutral-800">
+                <span class="text-neutral-400 block text-[10px] uppercase font-mono">Landmark</span>
+                <span class="font-semibold text-neutral-200">Govt Hr Sec School</span>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-900 border border-neutral-800">
+                <span class="text-neutral-400 block text-[10px] uppercase font-mono">Main Road</span>
+                <span class="font-semibold text-neutral-200">Senkottai Road</span>
+              </div>
+              <div class="col-span-2 sm:col-span-1 p-3 rounded-xl bg-obsidian-900 border border-neutral-800">
+                <span class="text-neutral-400 block text-[10px] uppercase font-mono">Town</span>
+                <span class="font-semibold text-gold-400">Surandai (TN76)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="border-t border-neutral-800 bg-obsidian-950 relative z-10 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-neutral-800">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400">
+            <i data-lucide="shield" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="font-cinzel text-lg font-bold tracking-wider text-neutral-100">TN76 MOTO POINT</div>
+            <div class="text-[11px] text-neutral-400">Surandai, Tenkasi District, Tamil Nadu</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-400 font-mono">
+          <a href="#hero" class="hover:text-gold-400 transition-colors">Home</a>
+          <a href="#shop" class="hover:text-gold-400 transition-colors">Collection</a>
+          <a href="#why" class="hover:text-gold-400 transition-colors">Why Us</a>
+          <a href="#fitment" class="hover:text-gold-400 transition-colors">Fitment</a>
+          <a href="#visit" class="hover:text-gold-400 transition-colors">Location</a>
+          <!-- Admin Console Unlock Link -->
+          <button onclick="openAdminModal()" class="text-neutral-500 hover:text-gold-400 transition-colors underline decoration-dotted">
+            Admin Console
+          </button>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono">
+        <div>
+          © 2026 TN76 Moto Point, Surandai. All rights reserved.
+        </div>
+        <div class="flex items-center gap-2">
+          <span>Crafted with pride for Tamil Nadu motorcycle enthusiasts</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a href="https://wa.me/919585023258?text=Hello%20TN76%20Moto%20Point%2C%20I%20want%20to%20order%20products%20from%20your%20website" target="_blank" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 group relative" title="Order on WhatsApp">
+      <!-- Pulsing ring -->
+      <span class="absolute -inset-1 rounded-full bg-emerald-400/40 animate-ping pointer-events-none"></span>
+      <i data-lucide="message-circle" class="w-7 h-7 relative z-10 group-hover:rotate-12 transition-transform"></i>
+    </a>
+  </div>
+
+  <!-- SLIDE-OVER SHOPPING BAG / CART DRAWER -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-all duration-300 opacity-0">
+    <!-- Backdrop Blur -->
+    <div id="cartBackdrop" onclick="toggleCartDrawer(false)" class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>
+
+    <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+      <div id="cartPanel" class="w-screen max-w-md bg-obsidian-900 border-l border-gold-500/20 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-out">
+        
+        <!-- Drawer Header -->
+        <div class="p-6 border-b border-neutral-800 flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="shopping-bag" class="w-5 h-5 text-gold-400"></i>
+            <h3 class="font-cinzel text-lg font-bold text-neutral-100">YOUR SHOPPING BAG</h3>
+            <span id="drawerCountPill" class="text-xs bg-gold-500/20 border border-gold-500/30 text-gold-400 px-2 py-0.5 rounded-full font-mono">0 items</span>
+          </div>
+          <button onclick="toggleCartDrawer(false)" class="p-2 text-neutral-400 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Drawer Items List -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Promo Code Section -->
+        <div class="px-6 py-3 bg-obsidian-950/60 border-t border-neutral-800/80">
+          <div class="flex gap-2">
+            <input type="text" id="promoInput" placeholder="Promo code (e.g. TN76VIP, SURANDAI10)" class="flex-1 bg-obsidian-900 border border-neutral-800 rounded-lg px-3 py-2 text-xs text-neutral-200 uppercase font-mono placeholder:normal-case placeholder-neutral-500 focus:outline-none focus:border-gold-500/50">
+            <button onclick="applyPromoCode()" class="px-3.5 py-2 rounded-lg bg-neutral-800 hover:bg-gold-500 text-neutral-200 hover:text-black font-bold text-xs uppercase transition-colors">
+              Apply
+            </button>
+          </div>
+          <div id="promoFeedback" class="text-[11px] font-mono mt-1 hidden"></div>
+        </div>
+
+        <!-- Drawer Footer & WhatsApp Checkout -->
+        <div class="p-6 bg-obsidian-950 border-t border-neutral-800 space-y-4">
+          
+          <div class="space-y-1.5 text-xs text-neutral-300">
+            <div class="flex justify-between">
+              <span class="text-neutral-400">Items Subtotal:</span>
+              <span id="cartSubtotal" class="font-mono font-medium text-neutral-100">₹0</span>
+            </div>
+            <div id="discountRow" class="flex justify-between text-emerald-400 hidden">
+              <span>Promotional Discount:</span>
+              <span id="cartDiscount" class="font-mono font-medium">-₹0</span>
+            </div>
+            <div class="flex justify-between text-base font-bold pt-2 border-t border-neutral-800">
+              <span class="text-neutral-100">Estimated Total:</span>
+              <span id="cartTotal" class="font-mono text-gold-400 font-bold">₹0</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 pt-2">
+            <!-- 1-Click WhatsApp Order Generation Button -->
+            <button id="checkoutWhatsAppBtn" onclick="checkoutViaWhatsApp()" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all active:scale-95">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Order on WhatsApp (Instant Hold)</span>
+            </button>
+
+            <a href="tel:+919585023258" class="w-full py-2.5 rounded-xl bg-obsidian-900 hover:bg-obsidian-850 border border-neutral-700 text-neutral-300 text-xs font-medium flex items-center justify-center gap-2 transition-colors">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span>Or Call Counter: 095850 23258</span>
+            </a>
+          </div>
+
+          <div class="text-[10px] text-center text-neutral-500 font-mono">
+            Direct pick-up at Senkottai Road, Surandai · Cash or UPI on collection
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT QUICK VIEW MODAL -->
+  <div id="quickViewModal" class="fixed inset-0 z-50 overflow-y-auto pointer-events-none transition-all duration-300 opacity-0 flex items-center justify-center p-4">
+    <div id="quickViewBackdrop" onclick="closeProductQuickView()" class="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity duration-300"></div>
+
+    <div class="relative bg-obsidian-900 border border-gold-500/30 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl z-10 space-y-6">
+      
+      <div class="flex items-start justify-between">
+        <div>
+          <span id="modalCategory" class="text-xs font-mono uppercase tracking-widest text-gold-400 font-semibold">HELMETS</span>
+          <h3 id="modalTitle" class="font-cinzel text-2xl font-bold text-neutral-100 mt-0.5">Product Title</h3>
+        </div>
+        <button onclick="closeProductQuickView()" class="p-2 text-neutral-400 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Visual Icon Display -->
+        <div class="h-56 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-neutral-800 flex flex-col items-center justify-center relative p-6">
+          <div class="w-24 h-24 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shadow-gold-glow mb-3">
+            <i id="modalIcon" data-lucide="hard-hat" class="w-12 h-12 text-gold-400"></i>
+          </div>
+          <span id="modalBadge" class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-300 border border-gold-500/30">BESTSELLER</span>
+        </div>
+
+        <!-- Specifications & Details -->
+        <div class="space-y-4">
+          <div class="text-2xl font-mono font-bold text-gold-400" id="modalPrice">₹1,800</div>
+          <p id="modalDescription" class="text-xs text-neutral-300 leading-relaxed">
+            Detailed specifications and safety certification details for this product.
+          </p>
+
+          <div class="space-y-2 text-xs font-mono border-t border-neutral-800 pt-3">
+            <div class="flex justify-between text-neutral-400">
+              <span>Standard Variant:</span>
+              <span id="modalSpec" class="text-neutral-200">Large</span>
+            </div>
+            <div class="flex justify-between text-neutral-400">
+              <span>Counter Availability:</span>
+              <span class="text-emerald-400">In Stock at Surandai</span>
+            </div>
+            <div class="flex justify-between text-neutral-400">
+              <span>Certification:</span>
+              <span class="text-neutral-200">100% Genuine ISI / Tested</span>
+            </div>
+          </div>
+
+          <div class="pt-3">
+            <button id="modalAddBtn" onclick="" class="w-full py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-gold-glow transition-all">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+              <span>Add to Bag</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SHOP ADMIN PANEL MODAL (PIN: 7676) -->
+  <div id="adminModal" class="fixed inset-0 z-50 overflow-y-auto pointer-events-none transition-all duration-300 opacity-0 flex items-center justify-center p-4">
+    <div id="adminBackdrop" onclick="closeAdminModal()" class="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity duration-300"></div>
+
+    <div class="relative bg-obsidian-900 border border-gold-500/30 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl z-10 space-y-6">
+      
+      <!-- Admin Login View -->
+      <div id="adminLoginSection" class="space-y-4 text-center py-4">
+        <div class="w-12 h-12 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-400 flex items-center justify-center mx-auto">
+          <i data-lucide="lock" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-cinzel text-xl font-bold text-neutral-100">Shop Admin Access</h3>
+        <p class="text-xs text-neutral-400">Enter the TN76 shopkeeper PIN to edit catalog prices & stock status.</p>
+        
+        <div class="max-w-xs mx-auto space-y-3">
+          <input type="password" id="adminPinInput" maxlength="6" placeholder="Enter Shop PIN" class="w-full text-center tracking-[0.5em] text-lg font-mono py-2.5 bg-obsidian-950 border border-neutral-700 rounded-xl text-neutral-100 focus:outline-none focus:border-gold-500">
+          <div class="text-[10px] text-neutral-500 font-mono">Default Demo PIN: <span class="text-gold-400 font-bold">7676</span></div>
+          <button onclick="verifyAdminPin()" class="w-full py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-colors">
+            Unlock Console
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Console View (After PIN) -->
+      <div id="adminConsoleSection" class="hidden space-y-5">
+        <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+          <div>
+            <span class="text-xs font-mono uppercase text-emerald-400 font-semibold">AUTHENTICATED</span>
+            <h3 class="font-cinzel text-lg font-bold text-neutral-100">Live Price & Stock Console</h3>
+          </div>
+          <button onclick="closeAdminModal()" class="p-1.5 text-neutral-400 hover:text-white rounded-lg">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <p class="text-xs text-neutral-400">Update counter prices in real-time. Changes are immediately saved and reflected on the site.</p>
+
+        <div id="adminProductsList" class="max-h-72 overflow-y-auto space-y-2 pr-1">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-neutral-800 text-xs">
+          <button onclick="resetDefaultProducts()" class="text-rose-400 hover:underline font-mono">
+            Reset to Default Prices
+          </button>
+          <button onclick="closeAdminModal()" class="px-4 py-2 rounded-lg bg-gold-500 text-obsidian-950 font-bold">
+            Done & Save
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- APPLICATION JAVASCRIPT LOGIC -->
+  <script>
+    // ==========================================
+    // 1. DATA REPOSITORY: TN76 MOTO POINT CATALOG
+    // (Exact items extracted from client-1-wt6i.vercel.app + extras)
+    // ==========================================
+    const DEFAULT_PRODUCTS = [
+      {
+        id: 1,
+        name: "Full-Face Helmet",
+        category: "helmets",
+        spec: "Large (58-60cm)",
+        price: 1800,
+        badge: "Bestseller",
+        icon: "hard-hat",
+        description: "High-impact aerodynamic ABS outer shell with anti-fog scratch-resistant visor and quick-release micrometric chin strap. ISI certified.",
+        inStock: true
+      },
+      {
+        id: 2,
+        name: "Open-Face Helmet",
+        category: "helmets",
+        spec: "Medium (56-58cm)",
+        price: 1200,
+        badge: null,
+        icon: "hard-hat",
+        description: "Classic retro cruiser styling with wide field of vision, high-density EPS liner, and washable anti-bacterial cheek pads.",
+        inStock: true
+      },
+      {
+        id: 3,
+        name: "Modular Dual-Visor Helmet",
+        category: "helmets",
+        spec: "XL (60-62cm)",
+        price: 2850,
+        badge: "Touring",
+        icon: "hard-hat",
+        description: "Flip-up chin bar with integrated drop-down sun visor. Designed for long highway touring with multi-channel airflow.",
+        inStock: true
+      },
+      {
+        id: 4,
+        name: "Riding Gloves",
+        category: "riding-gear",
+        spec: "Pair (Universal Fit)",
+        price: 450,
+        badge: null,
+        icon: "hand",
+        description: "Molded knuckle protection with breathable 3D mesh fabric, anti-skid silicone palm grip, and touchscreen sensitive conductive index fingertips.",
+        inStock: true
+      },
+      {
+        id: 5,
+        name: "Riding Jacket",
+        category: "riding-gear",
+        spec: "XL Size",
+        price: 2400,
+        badge: "New",
+        icon: "shirt",
+        description: "600D Cordura all-weather motorcycle jacket with removable CE Level 2 shoulder and elbow protectors plus high-visibility 3M reflective strips.",
+        inStock: true
+      },
+      {
+        id: 6,
+        name: "Knee & Elbow Armor Guards",
+        category: "riding-gear",
+        spec: "4-Piece Set",
+        price: 850,
+        badge: "Safety",
+        icon: "shield-alert",
+        description: "Dual-pivot articulating knee and elbow guards with high-density EVA shock absorption and elastic velcro straps.",
+        inStock: true
+      },
+      {
+        id: 7,
+        name: "Mobile Holder with Fast USB-C",
+        category: "accessories",
+        spec: "Universal Handlebar Mount",
+        price: 350,
+        badge: null,
+        icon: "smartphone",
+        description: "Heavy-duty anti-vibration smartphone mount with 360-degree ball head rotation and integrated weatherproof fast-charging USB port.",
+        inStock: true
+      },
+      {
+        id: 8,
+        name: "LED Fog Lights",
+        category: "accessories",
+        spec: "Pair (60W IP68)",
+        price: 900,
+        badge: "Popular",
+        icon: "sun",
+        description: "Dual-color (amber + crisp white) auxiliary LED pod lights with laser focus beam for extreme rain, fog, and highway visibility.",
+        inStock: true
+      },
+      {
+        id: 9,
+        name: "Disc Brake Lock",
+        category: "accessories",
+        spec: "Hardened Steel",
+        price: 400,
+        badge: null,
+        icon: "lock",
+        description: "Heavy duty alloy steel disc lock with pick-resistant cylindrical tumbler mechanism and high-visibility reminder coiled cable.",
+        inStock: true
+      },
+      {
+        id: 10,
+        name: "Rear-View Touring Mirrors",
+        category: "accessories",
+        spec: "Pair (M10 Thread)",
+        price: 250,
+        badge: null,
+        icon: "eye",
+        description: "Convex anti-glare blue-tinted rear view mirrors providing expanded blind-spot coverage with vibration-isolated aluminum stems.",
+        inStock: true
+      },
+      {
+        id: 11,
+        name: "Chain Lube & Cleaner Spray",
+        category: "care-spares",
+        spec: "250 ml High Tack",
+        price: 220,
+        badge: null,
+        icon: "droplet",
+        description: "Synthetic PTFE formula chain lubricant preventing high-speed fling while protecting O-ring and X-ring chains from rust and sand grit.",
+        inStock: true
+      },
+      {
+        id: 12,
+        name: "Motul 4T Synthetic Engine Oil",
+        category: "care-spares",
+        spec: "1 Litre (10W40)",
+        price: 480,
+        badge: "Essential",
+        icon: "flame",
+        description: "Premium motorcycle engine lubricant providing smooth wet-clutch engagement, high thermal stability, and engine cooling in Tamil Nadu heat.",
+        inStock: true
+      }
+    ];
+
+    // LocalStorage State Management
+    let products = JSON.parse(localStorage.getItem('tn76_products')) || DEFAULT_PRODUCTS;
+    let cart = JSON.parse(localStorage.getItem('tn76_cart')) || [];
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let sortMode = 'featured';
+    let appliedDiscount = 0;
+    let promoCodeName = '';
+    let soundEnabled = true;
+
+    // ==========================================
+    // 2. SYNTHESIZED WEB AUDIO API SOUND EFFECTS
+    // Tactile luxury clicks without external audio files
+    // ==========================================
+    let audioCtx = null;
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    function playHaptic(type = 'click') {
+      if (!soundEnabled) return;
+      try {
+        initAudio();
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        const now = audioCtx.currentTime;
+        if (type === 'click') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(600, now);
+          osc.frequency.exponentialRampToValueAtTime(800, now + 0.04);
+          gain.gain.setValueAtTime(0.06, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+          osc.start(now);
+          osc.stop(now + 0.05);
+        } else if (type === 'add') {
+          // Warm chime for adding to cart
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(523.25, now); // C5
+          osc.frequency.setValueAtTime(659.25, now + 0.06); // E5
+          gain.gain.setValueAtTime(0.08, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+          osc.start(now);
+          osc.stop(now + 0.15);
+        } else if (type === 'cta') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(440, now);
+          osc.frequency.exponentialRampToValueAtTime(880, now + 0.1);
+          gain.gain.setValueAtTime(0.09, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+          osc.start(now);
+          osc.stop(now + 0.12);
+        }
+      } catch (e) {
+        // AudioContext disabled or restricted
+      }
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      const label = document.getElementById('soundLabel');
+      const icon = document.getElementById('soundIcon');
+      if (soundEnabled) {
+        label.innerText = 'SOUND ON';
+        icon.setAttribute('data-lucide', 'volume-2');
+        playHaptic('click');
+      } else {
+        label.innerText = 'MUTED';
+        icon.setAttribute('data-lucide', 'volume-x');
+      }
+      lucide.createIcons();
+    }
+
+    // ==========================================
+    // 3. CATALOG RENDERING & FILTERING
+    // ==========================================
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      const emptyState = document.getElementById('emptyCatalogState');
+
+      let filtered = products.filter(p => {
+        const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                              p.spec.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      // Sorting
+      if (sortMode === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortMode === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortMode === 'name') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(product => `
+        <div class="glass-card spotlight-card rounded-2xl p-5 border border-gold-500/20 flex flex-col justify-between group relative overflow-hidden" 
+             onmousemove="handleCardTilt(event, this)">
+          
+          <!-- Top Badge & Availability -->
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-400">${product.category.replace('-', ' ')}</span>
+              ${product.badge ? `
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-gold-500/15 border border-gold-500/40 text-gold-300 font-semibold">
+                  ${product.badge}
+                </span>
+              ` : `
+                <span class="text-[10px] font-mono text-emerald-400 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> In Stock
+                </span>
+              `}
+            </div>
+
+            <!-- Product Visual Icon Graphic -->
+            <div class="relative py-7 my-2 flex items-center justify-center bg-obsidian-900/60 rounded-xl border border-neutral-800/80 group-hover:border-gold-500/30 transition-colors">
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-gold-500/20 flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:border-gold-400/50 transition-all duration-300">
+                <i data-lucide="${product.icon}" class="w-10 h-10 text-gold-400 drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]"></i>
+              </div>
+            </div>
+
+            <!-- Title & Variant Details -->
+            <div class="mt-4">
+              <h3 class="font-cinzel text-lg font-bold text-neutral-100 group-hover:text-gold-300 transition-colors">${product.name}</h3>
+              <p class="text-[11px] font-mono text-gold-400/90 mt-0.5">${product.spec}</p>
+              <p class="text-xs text-neutral-400 mt-2 line-clamp-2 leading-relaxed">${product.description}</p>
+            </div>
+          </div>
+
+          <!-- Bottom Price & Action Steppers -->
+          <div class="pt-5 mt-4 border-t border-neutral-800/80 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-neutral-500 uppercase font-mono block">Counter Price</span>
+              <span class="text-xl font-bold font-mono text-neutral-100 group-hover:text-gold-400 transition-colors">₹${product.price.toLocaleString('en-IN')}</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="openProductQuickView(${product.id})" class="p-2.5 rounded-xl bg-obsidian-900 hover:bg-obsidian-850 border border-neutral-700 text-neutral-300 hover:text-gold-400 transition-colors" title="View Specifications">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+
+              <button onclick="addToCart(${product.id}); playHaptic('add')" class="px-3.5 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-gold-glow transition-all active:scale-95">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                <span>Add</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+      updateCategoryCounts();
+    }
+
+    // 3D Card Tilt on Hover
+    function handleCardTilt(e, card) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    }
+
+    function setCategoryFilter(category) {
+      currentCategory = category;
+      playHaptic('click');
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        if (btn.dataset.category === category) {
+          btn.className = "category-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-gold-500 text-obsidian-950 shadow-gold-glow";
+        } else {
+          btn.className = "category-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-obsidian-900 text-neutral-300 hover:text-gold-400 border border-neutral-800 hover:border-gold-500/40";
+        }
+      });
+      renderProducts();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('productSearchInput').value;
+      renderProducts();
+    }
+
+    function handleSort() {
+      sortMode = document.getElementById('sortSelect').value;
+      playHaptic('click');
+      renderProducts();
+    }
+
+    function resetFilters() {
+      searchQuery = '';
+      currentCategory = 'all';
+      document.getElementById('productSearchInput').value = '';
+      setCategoryFilter('all');
+    }
+
+    function updateCategoryCounts() {
+      const countAll = products.length;
+      const countHelmets = products.filter(p => p.category === 'helmets').length;
+      const countGear = products.filter(p => p.category === 'riding-gear').length;
+      const countAcc = products.filter(p => p.category === 'accessories').length;
+      const countCare = products.filter(p => p.category === 'care-spares').length;
+
+      document.getElementById('count-all').innerText = countAll;
+      document.getElementById('count-helmets').innerText = countHelmets;
+      document.getElementById('count-riding-gear').innerText = countGear;
+      document.getElementById('count-accessories').innerText = countAcc;
+      document.getElementById('count-care-spares').innerText = countCare;
+    }
+
+    // ==========================================
+    // 4. CART & SLIDE-OVER BAG DRAWER LOGIC
+    // ==========================================
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      const existingIndex = cart.findIndex(item => item.id === productId);
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          spec: product.spec,
+          icon: product.icon,
+          quantity: 1
+        });
+      }
+      saveCart();
+      updateCartUI();
+      // Optional: Auto open cart drawer on first add
+      toggleCartDrawer(true);
+    }
+
+    function changeQuantity(productId, delta) {
+      const itemIndex = cart.findIndex(item => item.id === productId);
+      if (itemIndex === -1) return;
+
+      cart[itemIndex].quantity += delta;
+      if (cart[itemIndex].quantity <= 0) {
+        cart.splice(itemIndex, 1);
+      }
+      playHaptic('click');
+      saveCart();
+      updateCartUI();
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
+      playHaptic('click');
+      saveCart();
+      updateCartUI();
+    }
+
+    function saveCart() {
+      localStorage.setItem('tn76_cart', JSON.stringify(cart));
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      document.getElementById('cartCountBadge').innerText = totalItems;
+      document.getElementById('drawerCountPill').innerText = `${totalItems} ${totalItems === 1 ? 'item' : 'items'}`;
+
+      const itemsContainer = document.getElementById('cartItemsContainer');
+      if (cart.length === 0) {
+        itemsContainer.innerHTML = `
+          <div class="text-center py-16 space-y-3">
+            <i data-lucide="shopping-bag" class="w-12 h-12 text-neutral-600 mx-auto"></i>
+            <h4 class="font-cinzel text-lg text-neutral-300">Your bag is empty</h4>
+            <p class="text-xs text-neutral-500">Add certified helmets, gloves, or bike accessories to proceed.</p>
+            <button onclick="toggleCartDrawer(false)" class="mt-4 px-5 py-2.5 rounded-full bg-gold-500/20 text-gold-400 text-xs font-semibold border border-gold-500/30 hover:bg-gold-500/30 transition-colors">
+              Explore Collection
+            </button>
+          </div>
+        `;
+      } else {
+        itemsContainer.innerHTML = cart.map(item => `
+          <div class="p-3.5 rounded-xl bg-obsidian-950 border border-neutral-800 flex items-center justify-between gap-3 group">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-lg bg-obsidian-900 border border-gold-500/20 flex items-center justify-center text-gold-400 shrink-0">
+                <i data-lucide="${item.icon}" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-cinzel text-xs font-bold text-neutral-200 line-clamp-1">${item.name}</h4>
+                <div class="text-[10px] font-mono text-neutral-400">${item.spec}</div>
+                <div class="text-xs font-mono font-bold text-gold-400 mt-0.5">₹${(item.price * item.quantity).toLocaleString('en-IN')}</div>
+              </div>
+            </div>
+
+            <!-- Stepper -->
+            <div class="flex items-center gap-2">
+              <div class="flex items-center bg-obsidian-900 border border-neutral-800 rounded-lg p-0.5">
+                <button onclick="changeQuantity(${item.id}, -1)" class="w-6 h-6 flex items-center justify-center text-neutral-400 hover:text-white rounded hover:bg-neutral-800 text-xs font-bold">
+                  −
+                </button>
+                <span class="w-6 text-center text-xs font-mono font-bold text-neutral-200">${item.quantity}</span>
+                <button onclick="changeQuantity(${item.id}, 1)" class="w-6 h-6 flex items-center justify-center text-neutral-400 hover:text-white rounded hover:bg-neutral-800 text-xs font-bold">
+                  +
+                </button>
+              </div>
+
+              <button onclick="removeFromCart(${item.id})" class="text-neutral-500 hover:text-rose-400 p-1" title="Remove">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Calculations
+      document.getElementById('cartSubtotal').innerText = `₹${subtotal.toLocaleString('en-IN')}`;
+      
+      const discountRow = document.getElementById('discountRow');
+      if (appliedDiscount > 0) {
+        discountRow.classList.remove('hidden');
+        document.getElementById('cartDiscount').innerText = `-₹${appliedDiscount.toLocaleString('en-IN')}`;
+      } else {
+        discountRow.classList.add('hidden');
+      }
+
+      const finalTotal = Math.max(0, subtotal - appliedDiscount);
+      document.getElementById('cartTotal').innerText = `₹${finalTotal.toLocaleString('en-IN')}`;
+
+      lucide.createIcons();
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartBackdrop');
+      const panel = document.getElementById('cartPanel');
+
+      if (open) {
+        playHaptic('click');
+        drawer.classList.remove('pointer-events-none');
+        drawer.classList.remove('opacity-0');
+        backdrop.classList.remove('opacity-0');
+        panel.classList.remove('translate-x-full');
+      } else {
+        drawer.classList.add('pointer-events-none');
+        drawer.classList.add('opacity-0');
+        backdrop.classList.add('opacity-0');
+        panel.classList.add('translate-x-full');
+      }
+    }
+
+    function applyPromoCode() {
+      const code = document.getElementById('promoInput').value.trim().toUpperCase();
+      const feedback = document.getElementById('promoFeedback');
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      if (subtotal === 0) {
+        feedback.innerText = 'Add items to bag first!';
+        feedback.className = 'text-[11px] font-mono mt-1 text-rose-400 block';
+        return;
+      }
+
+      if (code === 'TN76VIP' || code === 'SURANDAI10') {
+        appliedDiscount = Math.round(subtotal * 0.10); // 10% off
+        promoCodeName = code;
+        feedback.innerText = `Promo applied! 10% discount (-₹${appliedDiscount})`;
+        feedback.className = 'text-[11px] font-mono mt-1 text-emerald-400 block';
+        playHaptic('add');
+      } else if (code === 'FIRST100') {
+        appliedDiscount = 100;
+        promoCodeName = code;
+        feedback.innerText = `Promo applied! ₹100 flat discount off counter price`;
+        feedback.className = 'text-[11px] font-mono mt-1 text-emerald-400 block';
+        playHaptic('add');
+      } else {
+        appliedDiscount = 0;
+        feedback.innerText = 'Invalid code. Try TN76VIP or SURANDAI10';
+        feedback.className = 'text-[11px] font-mono mt-1 text-rose-400 block';
+      }
+
+      updateCartUI();
+    }
+
+    // ==========================================
+    // 5. SEAMLESS WHATSAPP CHECKOUT GENERATOR
+    // Direct integration with 095850 23258
+    // ==========================================
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) {
+        alert('Please add at least one product to your bag before checking out.');
+        return;
+      }
+
+      playHaptic('cta');
+      const shopPhone = '919585023258';
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      const grandTotal = Math.max(0, subtotal - appliedDiscount);
+
+      let orderMessage = `*TN76 MOTO POINT - NEW ORDER HOLD REQUEST*\n`;
+      orderMessage += `📍 Counter: Senkottai Road, Surandai 627859\n`;
+      orderMessage += `-----------------------------------------\n`;
+      
+      cart.forEach((item, index) => {
+        orderMessage += `${index + 1}. *${item.name}* (${item.spec})\n`;
+        orderMessage += `   Qty: ${item.quantity} x ₹${item.price} = ₹${item.quantity * item.price}\n`;
+      });
+
+      orderMessage += `-----------------------------------------\n`;
+      orderMessage += `*Subtotal:* ₹${subtotal}\n`;
+      if (appliedDiscount > 0) {
+        orderMessage += `*Discount (${promoCodeName}):* -₹${appliedDiscount}\n`;
+      }
+      orderMessage += `*Estimated Grand Total:* ₹${grandTotal}\n`;
+      orderMessage += `-----------------------------------------\n`;
+      orderMessage += `🏍️ *Customer Request:* Please hold these items for store pickup / courier inquiry. Thank you!`;
+
+      const encodedMsg = encodeURIComponent(orderMessage);
+      const whatsappUrl = `https://wa.me/${shopPhone}?text=${encodedMsg}`;
+
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // ==========================================
+    // 6. HELMET SIZE CALCULATOR LOGIC
+    // ==========================================
+    function calculateHelmetSize(cm) {
+      document.getElementById('cmValueDisplay').innerText = `${cm} cm`;
+      const label = document.getElementById('sizeResultLabel');
+      const detail = document.getElementById('sizeResultDetail');
+
+      const cmNum = parseInt(cm);
+      if (cmNum <= 54) {
+        label.innerText = 'Extra Small (XS)';
+        detail.innerText = '53 - 54 cm · Compact Shell Fit';
+      } else if (cmNum <= 56) {
+        label.innerText = 'Small (S)';
+        detail.innerText = '55 - 56 cm · Snug Racing / Youth Fit';
+      } else if (cmNum <= 58) {
+        label.innerText = 'Medium (M)';
+        detail.innerText = '57 - 58 cm · Most Popular Indian Fit';
+      } else if (cmNum <= 60) {
+        label.innerText = 'Large (L)';
+        detail.innerText = '59 - 60 cm · Standard Adult Touring Fit';
+      } else if (cmNum <= 62) {
+        label.innerText = 'Extra Large (XL)';
+        detail.innerText = '61 - 62 cm · Relaxed Highway Fit';
+      } else {
+        label.innerText = 'Double XL (XXL)';
+        detail.innerText = '63 - 64 cm · Expanded Shell Size';
+      }
+    }
+
+    // ==========================================
+    // 7. PRODUCT QUICK VIEW MODAL
+    // ==========================================
+    function openProductQuickView(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      playHaptic('click');
+      document.getElementById('modalCategory').innerText = product.category.toUpperCase().replace('-', ' ');
+      document.getElementById('modalTitle').innerText = product.name;
+      document.getElementById('modalPrice').innerText = `₹${product.price.toLocaleString('en-IN')}`;
+      document.getElementById('modalSpec').innerText = product.spec;
+      document.getElementById('modalDescription').innerText = product.description;
+      
+      const badgeElem = document.getElementById('modalBadge');
+      if (product.badge) {
+        badgeElem.innerText = product.badge.toUpperCase();
+        badgeElem.classList.remove('hidden');
+      } else {
+        badgeElem.classList.add('hidden');
+      }
+
+      document.getElementById('modalIcon').setAttribute('data-lucide', product.icon);
+      document.getElementById('modalAddBtn').onclick = function() {
+        addToCart(product.id);
+        closeProductQuickView();
+      };
+
+      const modal = document.getElementById('quickViewModal');
+      modal.classList.remove('pointer-events-none');
+      modal.classList.remove('opacity-0');
+      lucide.createIcons();
+    }
+
+    function closeProductQuickView() {
+      const modal = document.getElementById('quickViewModal');
+      modal.classList.add('pointer-events-none');
+      modal.classList.add('opacity-0');
+    }
+
+    // ==========================================
+    // 8. SHOP ADMIN PIN CONSOLE (PIN: 7676)
+    // ==========================================
+    function openAdminModal() {
+      playHaptic('click');
+      document.getElementById('adminLoginSection').classList.remove('hidden');
+      document.getElementById('adminConsoleSection').classList.add('hidden');
+      document.getElementById('adminPinInput').value = '';
+      
+      const modal = document.getElementById('adminModal');
+      modal.classList.remove('pointer-events-none');
+      modal.classList.remove('opacity-0');
+    }
+
+    function closeAdminModal() {
+      const modal = document.getElementById('adminModal');
+      modal.classList.add('pointer-events-none');
+      modal.classList.add('opacity-0');
+    }
+
+    function verifyAdminPin() {
+      const pin = document.getElementById('adminPinInput').value.trim();
+      if (pin === '7676' || pin === '095850') {
+        playHaptic('cta');
+        document.getElementById('adminLoginSection').classList.add('hidden');
+        document.getElementById('adminConsoleSection').classList.remove('hidden');
+        renderAdminProductRows();
+      } else {
+        alert('Invalid PIN. Use default demo PIN: 7676');
+      }
+    }
+
+    function renderAdminProductRows() {
+      const list = document.getElementById('adminProductsList');
+      list.innerHTML = products.map(product => `
+        <div class="p-3 rounded-xl bg-obsidian-950 border border-neutral-800 flex items-center justify-between gap-3 text-xs">
+          <div>
+            <div class="font-bold text-neutral-200">${product.name}</div>
+            <div class="text-[10px] text-neutral-400 font-mono">${product.spec}</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-neutral-400 font-mono">₹</span>
+            <input type="number" value="${product.price}" onchange="updateProductPrice(${product.id}, this.value)" class="w-20 bg-obsidian-900 border border-neutral-700 rounded px-2 py-1 text-xs text-gold-400 font-mono font-bold text-right">
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateProductPrice(productId, newPrice) {
+      const val = parseInt(newPrice);
+      if (isNaN(val) || val < 0) return;
+      
+      const item = products.find(p => p.id === productId);
+      if (item) {
+        item.price = val;
+        localStorage.setItem('tn76_products', JSON.stringify(products));
+        renderProducts();
+        updateCartUI();
+      }
+    }
+
+    function resetDefaultProducts() {
+      if (confirm('Reset all catalog prices back to defaults?')) {
+        products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+        localStorage.removeItem('tn76_products');
+        renderAdminProductRows();
+        renderProducts();
+        updateCartUI();
+      }
+    }
+
+    // ==========================================
+    // 9. AMBIENT GOLD PARTICLES CANVAS ANIMATION
+    // ==========================================
+    function initCanvasAnimation() {
+      const canvas = document.getElementById('ambient-canvas');
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * width;
+          this.y = height + Math.random() * 20;
+          this.size = Math.random() * 2.2 + 0.6;
+          this.speedY = Math.random() * 0.7 + 0.2;
+          this.speedX = (Math.random() - 0.5) * 0.4;
+          this.opacity = Math.random() * 0.5 + 0.2;
+        }
+        update() {
+          this.y -= this.speedY;
+          this.x += this.speedX;
+          if (this.y < -10) this.reset();
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = 'rgba(212, 175, 55, 0.4)';
+          ctx.fill();
+        }
+      }
+
+      // Spawn 45 golden floating embers
+      for (let i = 0; i < 45; i++) {
+        const p = new Particle();
+        p.y = Math.random() * height; // initial spread
+        particles.push(p);
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Real-Time Business Hours Status
+    function updateStoreStatus() {
+      const now = new Date();
+      const hour = now.getHours();
+      const statusElem = document.getElementById('shopOpenStatusText');
+      if (hour >= 9 && hour < 21) {
+        statusElem.innerText = `Open Now · Closes at 9:30 PM`;
+      } else {
+        statusElem.innerText = `Opens at 9:00 AM · Order Online 24/7`;
+      }
+    }
+
+    // Initialization
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderProducts();
+      updateCartUI();
+      initCanvasAnimation();
+      updateStoreStatus();
+    });
+  </script>
+</body>
+</html>

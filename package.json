@@ -1,0 +1,20 @@
+{
+  "name": "tn76-moto-point",
+  "version": "1.0.0",
+  "description": "Premium animated business website for TN76 Moto Point (Surandai, Tenkasi)",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "python -m http.server 3000"
+  },
+  "keywords": [
+    "motorcycle",
+    "helmets",
+    "riding-gear",
+    "surandai",
+    "tenkasi",
+    "tn76"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
