@@ -12,11 +12,12 @@
   <!-- Google Fonts: Cinzel & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    const TNR = ['Times New Roman', 'Times', 'Tinos', 'serif'];
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -44,8 +45,7 @@
             }
           },
           fontFamily: {
-            cinzel: ['Cinzel', 'serif'],
-            outfit: ['Outfit', 'sans-serif']
+            cinzel: TNR, outfit: TNR, sans: TNR, serif: TNR, mono: TNR
           },
           boxShadow: {
             'gold-glow': '0 0 35px -5px rgba(212, 175, 55, 0.25)',
@@ -74,10 +74,16 @@
   </script>
 
   <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>window.lucide = { createIcons: function(){} };</script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 
   <style>
     /* Custom Luxury Styling */
+    html, body, button, input, select, textarea { font-family: 'Times New Roman', Times, Tinos, serif; }
+    .adm-inp { width:100%; background:#070707; border:1px solid #3f3f46; border-radius:.6rem; padding:.65rem .75rem; color:#f5f5f5; font-size:16px; }
+    .adm-inp:focus { outline:none; border-color:#d4af37; }
+    .adm-tab { flex:1; padding:.65rem .5rem; border-radius:.6rem; font-size:13px; font-weight:700; border:1px solid #3f3f46; color:#d4d4d4; background:#0c0b09; }
+    .adm-tab.on { background:#d4af37; color:#0c0b09; border-color:#d4af37; }
     ::selection {
       background: #d4af37;
       color: #0c0b09;
@@ -646,68 +652,9 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Review 1 -->
-        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
-          <div class="flex items-center justify-between">
-            <div class="flex text-amber-400 text-sm">★★★★★</div>
-            <span class="text-[10px] font-mono text-neutral-500">2 weeks ago</span>
-          </div>
-          <p class="text-xs text-neutral-300 leading-relaxed italic">
-            "Bought a full-face helmet and riding gloves here before my ride to Courtallam and Manimuthar. The fitting advice was spot on and prices are noticeably better than big city showrooms."
-          </p>
-          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
-            <div>
-              <div class="font-bold text-xs text-neutral-100">Karthik R.</div>
-              <div class="text-[10px] text-gold-400 font-mono">Yamaha R15 V4 · Surandai</div>
-            </div>
-            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">
-              KR
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
-          <div class="flex items-center justify-between">
-            <div class="flex text-amber-400 text-sm">★★★★★</div>
-            <span class="text-[10px] font-mono text-neutral-500">1 month ago</span>
-          </div>
-          <p class="text-xs text-neutral-300 leading-relaxed italic">
-            "Ordered fog lights and disc lock through WhatsApp in the morning, collected it in the afternoon. Very polite behavior and they even helped me verify the wiring compatibility."
-          </p>
-          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
-            <div>
-              <div class="font-bold text-xs text-neutral-100">Muthu Kumar</div>
-              <div class="text-[10px] text-gold-400 font-mono">Royal Enfield Classic 350 · Tenkasi</div>
-            </div>
-            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">
-              MK
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
-          <div class="flex items-center justify-between">
-            <div class="flex text-amber-400 text-sm">★★★★★</div>
-            <span class="text-[10px] font-mono text-neutral-500">3 weeks ago</span>
-          </div>
-          <p class="text-xs text-neutral-300 leading-relaxed italic">
-            "Best moto shop in Surandai. Chain lube, genuine Motul engine oil, and mobile mount all under one roof. Genuine quality and friendly owner."
-          </p>
-          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
-            <div>
-              <div class="font-bold text-xs text-neutral-100">Selva Ganesh</div>
-              <div class="text-[10px] text-gold-400 font-mono">KTM Duke 250 · Senkottai</div>
-            </div>
-            <div class="w-8 h-8 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">
-              SG
-            </div>
-          </div>
-        </div>
-
+      <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      <div class="text-center mt-10">
+        <a href="https://wa.me/919585023258?text=Hi%20TN76%20Moto%20Point%2C%20my%20review%3A%20" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gold-500/40 text-gold-400 text-sm font-semibold hover:bg-gold-500/10">Write your review on WhatsApp</a>
       </div>
 
     </section>
@@ -961,7 +908,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <!-- Visual Icon Display -->
-        <div class="h-56 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-neutral-800 flex flex-col items-center justify-center relative p-6">
+        <div id="modalVisual" class="h-56 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-neutral-800 flex flex-col items-center justify-center relative p-6">
           <div class="w-24 h-24 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shadow-gold-glow mb-3">
             <i id="modalIcon" data-lucide="hard-hat" class="w-12 h-12 text-gold-400"></i>
           </div>
@@ -1003,10 +950,10 @@
   </div>
 
   <!-- SHOP ADMIN PANEL MODAL (PIN: 7676) -->
-  <div id="adminModal" class="fixed inset-0 z-50 overflow-y-auto pointer-events-none transition-all duration-300 opacity-0 flex items-center justify-center p-4">
+  <div id="adminModal" class="fixed inset-0 z-50 overflow-y-auto pointer-events-none transition-all duration-300 opacity-0 flex items-start sm:items-center justify-center p-2 sm:p-4">
     <div id="adminBackdrop" onclick="closeAdminModal()" class="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity duration-300"></div>
 
-    <div class="relative bg-obsidian-900 border border-gold-500/30 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl z-10 space-y-6">
+    <div class="relative bg-obsidian-900 border border-gold-500/30 rounded-3xl max-w-2xl w-full p-4 sm:p-8 shadow-2xl z-10 space-y-5 my-2">
       
       <!-- Admin Login View -->
       <div id="adminLoginSection" class="space-y-4 text-center py-4">
@@ -1014,7 +961,7 @@
           <i data-lucide="lock" class="w-6 h-6"></i>
         </div>
         <h3 class="font-cinzel text-xl font-bold text-neutral-100">Shop Admin Access</h3>
-        <p class="text-xs text-neutral-400">Enter the TN76 shopkeeper PIN to edit catalog prices & stock status.</p>
+        <p class="text-xs text-neutral-400">Enter the TN76 shopkeeper PIN to add product photos, prices & reviews.</p>
         
         <div class="max-w-xs mx-auto space-y-3">
           <input type="password" id="adminPinInput" maxlength="6" placeholder="Enter Shop PIN" class="w-full text-center tracking-[0.5em] text-lg font-mono py-2.5 bg-obsidian-950 border border-neutral-700 rounded-xl text-neutral-100 focus:outline-none focus:border-gold-500">
@@ -1030,22 +977,58 @@
         <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
           <div>
             <span class="text-xs font-mono uppercase text-emerald-400 font-semibold">AUTHENTICATED</span>
-            <h3 class="font-cinzel text-lg font-bold text-neutral-100">Live Price & Stock Console</h3>
+            <h3 class="font-cinzel text-lg font-bold text-neutral-100">Shop Admin Console</h3>
           </div>
           <button onclick="closeAdminModal()" class="p-1.5 text-neutral-400 hover:text-white rounded-lg">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
 
-        <p class="text-xs text-neutral-400">Update counter prices in real-time. Changes are immediately saved and reflected on the site.</p>
+        <div class="flex gap-2">
+          <button id="tab-products" class="adm-tab on" onclick="showAdminTab('products')">Products</button>
+          <button id="tab-add" class="adm-tab" onclick="showAdminTab('add')">+ Photo</button>
+          <button id="tab-reviews" class="adm-tab" onclick="showAdminTab('reviews')">Reviews</button>
+        </div>
 
-        <div id="adminProductsList" class="max-h-72 overflow-y-auto space-y-2 pr-1">
-          <!-- Populated by JS -->
+        <div id="pane-products">
+          <p class="text-xs text-neutral-400 mb-2">Edit prices or delete items. Changes save instantly.</p>
+          <div id="adminProductsList" class="max-h-80 overflow-y-auto space-y-2 pr-1"></div>
+        </div>
+
+        <div id="pane-add" class="hidden space-y-3">
+          <label class="block text-xs text-neutral-400">Photo (camera or gallery)
+            <input type="file" accept="image/*" onchange="handlePhotoSelect(this)" class="adm-inp mt-1">
+          </label>
+          <img id="photoPreview" class="hidden w-full max-h-56 object-cover rounded-xl border border-neutral-700" alt="Preview">
+          <select id="newCategory" class="adm-inp">
+            <option value="helmets">Type: Helmets</option>
+            <option value="riding-gear">Type: Riding Gear</option>
+            <option value="accessories">Type: Accessories</option>
+            <option value="care-spares">Type: Care &amp; Spares</option>
+          </select>
+          <input id="newName" class="adm-inp" placeholder="Product name">
+          <div class="grid grid-cols-2 gap-2">
+            <input id="newPrice" type="number" inputmode="numeric" class="adm-inp" placeholder="Price ₹">
+            <input id="newSpec" class="adm-inp" placeholder="Size / spec">
+          </div>
+          <textarea id="newDesc" rows="2" class="adm-inp" placeholder="Short description (optional)"></textarea>
+          <button onclick="addProduct()" class="w-full py-3 rounded-xl bg-gold-500 text-obsidian-950 font-bold text-sm">Add to Catalog</button>
+        </div>
+
+        <div id="pane-reviews" class="hidden space-y-3">
+          <input id="revName" class="adm-inp" placeholder="Customer name">
+          <input id="revBike" class="adm-inp" placeholder="Bike · Place (e.g. Yamaha R15 · Surandai)">
+          <select id="revRating" class="adm-inp">
+            <option value="5">★★★★★ (5)</option><option value="4">★★★★☆ (4)</option><option value="3">★★★☆☆ (3)</option>
+          </select>
+          <textarea id="revText" rows="3" class="adm-inp" placeholder="Review text"></textarea>
+          <button onclick="addReview()" class="w-full py-3 rounded-xl bg-gold-500 text-obsidian-950 font-bold text-sm">Add Review</button>
+          <div id="adminReviewsList" class="max-h-56 overflow-y-auto space-y-2 pr-1"></div>
         </div>
 
         <div class="flex items-center justify-between pt-3 border-t border-neutral-800 text-xs">
           <button onclick="resetDefaultProducts()" class="text-rose-400 hover:underline font-mono">
-            Reset to Default Prices
+            Reset Catalog to Default
           </button>
           <button onclick="closeAdminModal()" class="px-4 py-2 rounded-lg bg-gold-500 text-obsidian-950 font-bold">
             Done & Save
@@ -1199,7 +1182,7 @@
     ];
 
     // LocalStorage State Management
-    let products = JSON.parse(localStorage.getItem('tn76_products')) || DEFAULT_PRODUCTS;
+    let products = JSON.parse(localStorage.getItem('tn76_products')) || JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
     let cart = JSON.parse(localStorage.getItem('tn76_cart')) || [];
     let currentCategory = 'all';
     let searchQuery = '';
@@ -1329,12 +1312,16 @@
               `}
             </div>
 
-            <!-- Product Visual Icon Graphic -->
+            <!-- Product Visual -->
+            ${product.image ? `
+            <div class="my-2 rounded-xl overflow-hidden border border-neutral-800/80">
+              <img src="${product.image}" alt="${esc(product.name)}" loading="lazy" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>` : `
             <div class="relative py-7 my-2 flex items-center justify-center bg-obsidian-900/60 rounded-xl border border-neutral-800/80 group-hover:border-gold-500/30 transition-colors">
-              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-gold-500/20 flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:border-gold-400/50 transition-all duration-300">
-                <i data-lucide="${product.icon}" class="w-10 h-10 text-gold-400 drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]"></i>
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-obsidian-800 to-obsidian-950 border border-gold-500/20 flex items-center justify-center shadow-lg">
+                <i data-lucide="${product.icon}" class="w-10 h-10 text-gold-400"></i>
               </div>
-            </div>
+            </div>`}
 
             <!-- Title & Variant Details -->
             <div class="mt-4">
@@ -1687,6 +1674,9 @@
       }
 
       document.getElementById('modalIcon').setAttribute('data-lucide', product.icon);
+      const vis = document.getElementById('modalVisual');
+      vis.style.background = product.image ? `url("${product.image}") center/cover` : '';
+      vis.children[0].style.display = product.image ? 'none' : '';
       document.getElementById('modalAddBtn').onclick = function() {
         addToCart(product.id);
         closeProductQuickView();
@@ -1731,25 +1721,24 @@
         document.getElementById('adminLoginSection').classList.add('hidden');
         document.getElementById('adminConsoleSection').classList.remove('hidden');
         renderAdminProductRows();
+        showAdminTab('products');
       } else {
         alert('Invalid PIN. Use default demo PIN: 7676');
       }
     }
 
     function renderAdminProductRows() {
-      const list = document.getElementById('adminProductsList');
-      list.innerHTML = products.map(product => `
-        <div class="p-3 rounded-xl bg-obsidian-950 border border-neutral-800 flex items-center justify-between gap-3 text-xs">
-          <div>
-            <div class="font-bold text-neutral-200">${product.name}</div>
-            <div class="text-[10px] text-neutral-400 font-mono">${product.spec}</div>
+      document.getElementById('adminProductsList').innerHTML = products.map(p => `
+        <div class="p-2 rounded-xl bg-obsidian-950 border border-neutral-800 flex items-center gap-2 text-xs">
+          ${p.image ? `<img src="${p.image}" class="w-12 h-12 rounded-lg object-cover shrink-0">` : `<div class="w-12 h-12 rounded-lg bg-obsidian-800 shrink-0"></div>`}
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-neutral-200 truncate">${esc(p.name)}</div>
+            <div class="text-[11px] text-gold-400">${CATS[p.category] || p.category}</div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-neutral-400 font-mono">₹</span>
-            <input type="number" value="${product.price}" onchange="updateProductPrice(${product.id}, this.value)" class="w-20 bg-obsidian-900 border border-neutral-700 rounded px-2 py-1 text-xs text-gold-400 font-mono font-bold text-right">
-          </div>
-        </div>
-      `).join('');
+          <input type="number" inputmode="numeric" value="${p.price}" onchange="updateProductPrice(${p.id}, this.value)" class="w-20 bg-obsidian-900 border border-neutral-700 rounded px-2 py-2 text-gold-400 font-bold text-right" style="font-size:16px">
+          <button onclick="deleteProduct(${p.id})" class="p-2 text-rose-400" title="Delete"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>`).join('');
+      lucide.createIcons();
     }
 
     function updateProductPrice(productId, newPrice) {
@@ -1766,7 +1755,7 @@
     }
 
     function resetDefaultProducts() {
-      if (confirm('Reset all catalog prices back to defaults?')) {
+      if (confirm('Reset the whole catalog (including photos you added) back to defaults?')) {
         products = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
         localStorage.removeItem('tn76_products');
         renderAdminProductRows();
@@ -1836,6 +1825,139 @@
       animate();
     }
 
+    // ==========================================
+    // ADMIN: PHOTOS, TYPES, REVIEWS
+    // ==========================================
+    const CATS = { 'helmets': 'Helmets', 'riding-gear': 'Riding Gear', 'accessories': 'Accessories', 'care-spares': 'Care & Spares' };
+    const CAT_ICON = { 'helmets': 'hard-hat', 'riding-gear': 'shirt', 'accessories': 'sun', 'care-spares': 'droplet' };
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    let pendingPhoto = null;
+
+    function saveData(key, val) {
+      try { localStorage.setItem(key, JSON.stringify(val)); return true; }
+      catch (e) { alert('Storage full. Delete a few photos or use smaller images.'); return false; }
+    }
+
+    function showAdminTab(name) {
+      ['products', 'add', 'reviews'].forEach(n => {
+        document.getElementById('pane-' + n).classList.toggle('hidden', n !== name);
+        document.getElementById('tab-' + n).classList.toggle('on', n === name);
+      });
+      if (name === 'products') renderAdminProductRows();
+      if (name === 'reviews') renderAdminReviews();
+    }
+
+    function compressImage(file, max = 800, q = 0.72) {
+      return new Promise((resolve, reject) => {
+        const img = new Image(), url = URL.createObjectURL(file);
+        img.onload = () => {
+          const k = Math.min(1, max / Math.max(img.width, img.height));
+          const c = document.createElement('canvas');
+          c.width = Math.round(img.width * k); c.height = Math.round(img.height * k);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          URL.revokeObjectURL(url);
+          resolve(c.toDataURL('image/jpeg', q));
+        };
+        img.onerror = reject;
+        img.src = url;
+      });
+    }
+
+    async function handlePhotoSelect(input) {
+      if (!input.files[0]) return;
+      try {
+        pendingPhoto = await compressImage(input.files[0]);
+        const pv = document.getElementById('photoPreview');
+        pv.src = pendingPhoto; pv.classList.remove('hidden');
+      } catch (e) { alert('Could not read this image. Try another photo.'); }
+    }
+
+    function addProduct() {
+      const name = document.getElementById('newName').value.trim();
+      const price = parseInt(document.getElementById('newPrice').value);
+      const category = document.getElementById('newCategory').value;
+      if (!name || isNaN(price) || price < 0) { alert('Please enter product name and price.'); return; }
+      const next = products.concat([{
+        id: Math.max(0, ...products.map(p => p.id)) + 1,
+        name, category, price,
+        spec: document.getElementById('newSpec').value.trim() || 'Standard',
+        badge: 'New', icon: CAT_ICON[category],
+        description: document.getElementById('newDesc').value.trim() || name,
+        image: pendingPhoto, inStock: true
+      }]);
+      if (!saveData('tn76_products', next)) return;
+      products = next; pendingPhoto = null;
+      ['newName', 'newPrice', 'newSpec', 'newDesc'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('photoPreview').classList.add('hidden');
+      renderProducts(); playHaptic('cta');
+      showAdminTab('products');
+    }
+
+    function deleteProduct(id) {
+      if (!confirm('Delete this product?')) return;
+      products = products.filter(p => p.id !== id);
+      cart = cart.filter(i => i.id !== id);
+      saveData('tn76_products', products);
+      renderProducts(); updateCartUI(); renderAdminProductRows();
+    }
+
+    const DEFAULT_REVIEWS = [
+      { name: 'Karthik R.', bike: 'Yamaha R15 V4 · Surandai', rating: 5, when: '2 weeks ago', text: 'Bought a full-face helmet and riding gloves here before my ride to Courtallam and Manimuthar. The fitting advice was spot on and prices are noticeably better than big city showrooms.' },
+      { name: 'Muthu Kumar', bike: 'Royal Enfield Classic 350 · Tenkasi', rating: 5, when: '1 month ago', text: 'Ordered fog lights and disc lock through WhatsApp in the morning, collected it in the afternoon. Very polite behavior and they even helped me verify the wiring compatibility.' },
+      { name: 'Selva Ganesh', bike: 'KTM Duke 250 · Senkottai', rating: 5, when: '3 weeks ago', text: 'Best moto shop in Surandai. Chain lube, genuine Motul engine oil, and mobile mount all under one roof. Genuine quality and friendly owner.' }
+    ];
+    let reviews = JSON.parse(localStorage.getItem('tn76_reviews')) || JSON.parse(JSON.stringify(DEFAULT_REVIEWS));
+
+    function renderReviews() {
+      document.getElementById('reviewsGrid').innerHTML = reviews.map(r => `
+        <div class="glass-card p-6 rounded-2xl space-y-4 border border-gold-500/20">
+          <div class="flex items-center justify-between">
+            <div class="text-amber-400 text-sm">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+            <span class="text-[11px] text-neutral-500">${esc(r.when)}</span>
+          </div>
+          <p class="text-sm text-neutral-300 leading-relaxed italic">"${esc(r.text)}"</p>
+          <div class="pt-2 border-t border-neutral-800 flex items-center justify-between">
+            <div>
+              <div class="font-bold text-sm text-neutral-100">${esc(r.name)}</div>
+              <div class="text-[11px] text-gold-400">${esc(r.bike)}</div>
+            </div>
+            <div class="w-9 h-9 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xs font-bold">${esc(r.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase())}</div>
+          </div>
+        </div>`).join('');
+    }
+
+    function renderAdminReviews() {
+      document.getElementById('adminReviewsList').innerHTML = reviews.map((r, i) => `
+        <div class="p-2 rounded-xl bg-obsidian-950 border border-neutral-800 flex items-center justify-between gap-2 text-xs">
+          <div class="min-w-0"><div class="font-bold text-neutral-200 truncate">${esc(r.name)} · ${'★'.repeat(r.rating)}</div>
+          <div class="text-neutral-400 truncate">${esc(r.text)}</div></div>
+          <button onclick="deleteReview(${i})" class="p-2 text-rose-400"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>`).join('');
+      lucide.createIcons();
+    }
+
+    function addReview() {
+      const name = document.getElementById('revName').value.trim();
+      const text = document.getElementById('revText').value.trim();
+      if (!name || !text) { alert('Please enter name and review text.'); return; }
+      const next = [{
+        name, text, rating: parseInt(document.getElementById('revRating').value),
+        bike: document.getElementById('revBike').value.trim() || 'Surandai',
+        when: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+      }].concat(reviews);
+      if (!saveData('tn76_reviews', next)) return;
+      reviews = next;
+      ['revName', 'revBike', 'revText'].forEach(id => document.getElementById(id).value = '');
+      renderReviews(); renderAdminReviews(); playHaptic('cta');
+    }
+
+    function deleteReview(i) {
+      if (!confirm('Delete this review?')) return;
+      reviews.splice(i, 1);
+      saveData('tn76_reviews', reviews);
+      renderReviews(); renderAdminReviews();
+    }
+
     // Mobile Menu Toggle
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
@@ -1861,6 +1983,7 @@
       updateCartUI();
       initCanvasAnimation();
       updateStoreStatus();
+      renderReviews();
     });
   </script>
 </body>
